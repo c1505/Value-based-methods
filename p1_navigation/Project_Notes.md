@@ -1,5 +1,33 @@
-* Ran with default hyperparameters to start
-* Ideas for Future Work
+# TODO
+* change this file to README.md
+
+# Reinforcement learning environment details
+* State space: 
+    * size: 37
+    * velocity and ray based perception of objects in agent's forward direction 
+* reward: +1 for collecting yellow banana
+              -1 for collecting blue banana
+* action space
+    * size: 4
+    * actions:
+        - `0` - walk forward 
+        - `1` - walk backward
+        - `2` - turn left
+        - `3` - turn right
+
+* solved environment
+    Going based on the plotted rewards shown in "Bencharmk Implementation", this course is considering the environment solved at an approximate score of 14.
+
+
+# Setup
+* Many of the dependencies for this project are old
+* In order to have the `unityagents` environment working, it was necessary to use older versions of torch and python.  
+* there were challenges getting    
+* The install was done as described by the Readme in the value based repo with some minor changes to prefer newer versions of dependencies when possible
+  * torch==1.10.2
+
+
+# Ideas for Future Work
   * Hyperparameter tuning
   * running with a different algorithm
   * Increasing speed of training
@@ -9,6 +37,8 @@
   * integrate with tensorboard and/or weights and biases
 
 
+# Misc 
+* Ran with default hyperparameters to start
 
   I get this error on occasion when trying to create a second environment in a single jupyter session.  Fix it
 
