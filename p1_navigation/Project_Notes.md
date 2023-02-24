@@ -18,7 +18,8 @@
         - `3` - turn right
 
 * solved environment
-    Going based on the plotted rewards shown in "Bencharmk Implementation", this course is considering the environment solved at an approximate score of 14.
+    * The rubric states that the agent much achieve an average reward at least 13 over 100 episodes
+    * The plotted rewards shown in "Benchmark Implementation" show an approximate score of 14.
 
 
 # Setup(Tested on Ubuntu Linux 22.04)
