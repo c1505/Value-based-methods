@@ -1,5 +1,7 @@
 # TODO
 * change this file to README.md
+* spell check
+
 
 # Reinforcement learning environment details
 * State space: 
@@ -19,12 +21,46 @@
     Going based on the plotted rewards shown in "Bencharmk Implementation", this course is considering the environment solved at an approximate score of 14.
 
 
-# Setup
+# Setup(Tested on Ubuntu Linux 22.04)
+## Easy
+* run `conda create -f environment.yml`
+* The Banana environment is included in the repository.  If there are issues, re-download from here: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
 * Many of the dependencies for this project are old
 * In order to have the `unityagents` environment working, it was necessary to use older versions of torch and python.  
 * there were challenges getting    
 * The install was done as described by the Readme in the value based repo with some minor changes to prefer newer versions of dependencies when possible
   * torch==1.10.2
+
+## Dependency install instructions(Copied from root of repository)
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	conda activate drlnd
+	```
+	
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+	- Install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/Value-based-methods.git
+cd Value-based-methods/python
+pip install .
+```
+
+4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+
 
 
 # Ideas for Future Work
