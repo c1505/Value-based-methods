@@ -42,7 +42,10 @@ For the goal of improving the agent for this environment, we could still at leas
   * log more learning metrics
   * integrate with tensorboard and/or weights and biases
 
-
+# Plot of Rewards
+* As shown in the jupyter notebook, training was done for 2000 episodes.  
+* an episode is defined as x timesteps or y
+* rewards are accumulated for blah and shown as the score
 
 ## Requirements
 
@@ -52,6 +55,9 @@ For the goal of improving the agent for this environment, we could still at leas
 ### Plot of Rewards
 
 -[] A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment.
+
+![Episode rewards](2000_episode_rewards_plot.png "Episode rewards")
+
 
 ### Ideas for Future Work
 
