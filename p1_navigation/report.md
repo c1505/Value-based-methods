@@ -56,7 +56,7 @@ For the goal of improving the agent for this environment, we could still at leas
 
 -[] A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment.
 
-![Episode rewards](2000_episode_rewards_plot.png "Episode rewards")
+![Episode rewards](2000_episode_rewards_plot_3.png "Episode rewards")
 
 
 ### Ideas for Future Work
