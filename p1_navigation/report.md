@@ -12,14 +12,22 @@ The implementation of the DQN algorithm is adapted from an exercise in the Udaci
 The hyperparameters used for the DQN algorithm are as follows:
 
 ```python
+
+##### dqn_agent.py #####
 BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 64         # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR = 5e-4               # learning rate 
 UPDATE_EVERY = 4        # how often to update the network
+
+##### Other tuneable parameters #####
+HIDDEN LAYER SIZE = 64
+NUMBER OF HIDDEN LAYERS = 2
+eps_start = 1
+eps_end = 0.01
+eps_decay= 0.995
 ```
-While the activation function, hidden layer size, and number of hidden layers are not listed here as hyperparameters, they are often treated as such and tuned in other implementations.  
 
 ### Model Architecture
 The neural network used for function approximation in the DQN algorithm is a multilayer perceptron with 2 hidden layers of 64 nodes each. The input to the network is the observation (state) of the environment, and the output is the Q-value for each action in that state. The activation function used in the hidden layers is the rectified linear unit (ReLU).
@@ -28,6 +36,7 @@ The neural network used for function approximation in the DQN algorithm is a mul
 While the DQN algorithm was able to solve the Banana environment without hyperparameter tuning, there are several ways to improve its performance and efficiency. Some possible future ideas for improving the DQN algorithm and the agent's performance in this environment are:
 
 * Hyperparameter tuning
+  * Refactor code to make it easier to see and change all of the hyperparameters in one place and automatically tune if desired. 
   * Modify hyperparameters such as the learning rate, discount factor, and replay buffer size to improve the agent's learning and performance.
   * Experiment with different activation functions, hidden layer sizes, and number of hidden layers.
   * Search for similar tasks in published work on ML-Agents and try to adapt the hyperparameters used in those tasks to this environment.
