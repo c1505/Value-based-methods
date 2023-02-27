@@ -68,17 +68,3 @@ For the goal of improving the agent for this environment, we could still at leas
 * rewards are accumulated for blah and shown as the score
 ![Episode rewards](2000_episode_rewards_plot_3.png "Episode rewards")
 
-## Requirements
-
-### Learning algorithm description
--[x] The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
-
-### Plot of Rewards
-
--[x] A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment.
-
-
-
-### Ideas for Future Work
-
--[x] The submission has concrete future ideas for improving the agent's performance.
