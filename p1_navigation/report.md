@@ -35,21 +35,11 @@ The neural network used for function approximation in the DQN algorithm is a mul
 # Ideas for Future Work
 While the DQN algorithm was able to solve the Banana environment without hyperparameter tuning, there are several ways to improve its performance and efficiency. Some possible future ideas for improving the DQN algorithm and the agent's performance in this environment are:
 
-* Hyperparameter tuning
-  * Refactor code to make it easier to see and change all of the hyperparameters in one place and automatically tune if desired. 
-  * Modify hyperparameters such as the learning rate, discount factor, and replay buffer size to improve the agent's learning and performance.
-  * Experiment with different activation functions, hidden layer sizes, and number of hidden layers.
-  * Search for similar tasks in published work on ML-Agents and try to adapt the hyperparameters used in those tasks to this environment.
-  * Manually tune a few of the hyperparameters and run a lot of experiments to track results.
-* Implement improvements from the Rainbow paper
-  * The Rainbow paper combines various improvements made in the DQN algorithm and does ablation studies to determine the importance of each change. Start with the most important changes or implement all of them to see if there is a significant improvement in performance.
-* Use multiple seeds
-  * Run the same training process with different random seeds to see how the results vary and whether the agent is robust to changes in the initial conditions.
-* Update the environment to be used with up-to-date ML-Agents packages
-  * This would allow using other implementations of DQN, such as those from Stable Baselines 3, CleanRL, and Sample Factory.
-  * Having a known good implementation to compare against is useful for evaluating the effectiveness of changes made to the algorithm.
-* Experiment with other algorithms
-  * Try other value-based or policy-based algorithms to see if there is a better fit for this environment.
+1. Hyperparameter tuning: The current implementation of the DQN algorithm does not include hyperparameter tuning, which could significantly improve the agent's performance. The report suggests several methods for tuning hyperparameters, including manually modifying a few hyperparameters, looking for similar tasks in published work on ml-agents, and using existing RL baselines.
+2. Implementing improvements from the Rainbow paper: The Rainbow paper introduces several improvements to the DQN algorithm, including prioritized experience replay, double Q-learning, and dueling networks. These improvements have been shown to significantly improve performance on a variety of tasks, and implementing them could help improve the agent's performance in the current environment.
+3. Running with multiple seeds: The agent's performance may be affected by the random initialization of the neural network weights and other stochastic components of the DQN algorithm. Running the algorithm with multiple seeds and comparing the results could help identify more robust and consistent hyperparameters and architecture choices.
+4. Increasing speed of training: The current implementation trains the agent for 2000 episodes, which may take a significant amount of time. Finding ways to speed up training could allow for more experiments and iterations on the agent's performance.
+5. Integrating with tensorboard and/or weights and biases: More detailed logging and visualization of the agent's learning metrics could provide insights into the agent's behavior and performance during training. Tensorboard and weights and biases are popular tools for visualizing and tracking machine learning experiments.
 
 # Plot of Rewards
 * As shown in the jupyter notebook, training was done for 2000 episodes.  
