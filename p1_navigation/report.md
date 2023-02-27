@@ -1,11 +1,30 @@
 Report
 
 # Learning Algorithm Description
+## Algorithm
 * Algorithm: Deep Q Learning (DQN)
 * Implementation adapted from Udacity course exercise..
 * The DQN algorithm was originally described in the paper [Human-level control through deep reinforcement
 learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+* DQN is a value based algorithm
+* The value of taking an action in a given state is estimated
+* Neural network is the function approximator #TODO make sure this is correct
+    * input: observation(state)
+    * output: q value for each action at the state
+## hyperparameters:
 
+```python
+BUFFER_SIZE = int(1e5)  # replay buffer size
+BATCH_SIZE = 64         # minibatch size
+GAMMA = 0.99            # discount factor
+TAU = 1e-3              # for soft update of target parameters
+LR = 5e-4               # learning rate 
+UPDATE_EVERY = 4        # how often to update the network
+```
+While the activation function, hidden layer size, and number of hidden layers are not listed here as hyperparameters, they are often treated as such and tuned in other implementations.  
+
+## Model Architecture
+Multilayer perceptron with 2 hidden layers with 64 nodes in each layer.  The activation function is RELU.  
 
 
 
@@ -26,6 +45,7 @@ For the goal of improving the agent for this environment, we could still at leas
 
   * Hyperparameter tuning
   * find a good set of hyperparameters for a similar task
+    * different activation function 
     * RL baselines zoo
     * look for similar tasks in published work on ml-agents
     * do manual hyperparameter tuning
@@ -46,19 +66,19 @@ For the goal of improving the agent for this environment, we could still at leas
 * As shown in the jupyter notebook, training was done for 2000 episodes.  
 * an episode is defined as x timesteps or y
 * rewards are accumulated for blah and shown as the score
+![Episode rewards](2000_episode_rewards_plot_3.png "Episode rewards")
 
 ## Requirements
 
 ### Learning algorithm description
--[] The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
+-[x] The report clearly describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks.
 
 ### Plot of Rewards
 
--[] A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment.
+-[x] A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment.
 
-![Episode rewards](2000_episode_rewards_plot_3.png "Episode rewards")
 
 
 ### Ideas for Future Work
 
--[] The submission has concrete future ideas for improving the agent's performance.
+-[x] The submission has concrete future ideas for improving the agent's performance.
